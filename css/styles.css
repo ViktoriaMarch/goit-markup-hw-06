@@ -841,7 +841,11 @@ p.progect-name {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.close-button {
+.modal-btn:hover .close-icon {
+  fill: var(--accent-color);
+}
+
+.close-icon {
   position: absolute;
   top: 0;
   left: 0;
@@ -907,10 +911,6 @@ p.progect-name {
   width: 24px;
 }
 
-.input-modal:focus {
-  border: 1px solid var(--accent-color);
-}
-
 .form-title {
   font-weight: 700;
   font-size: 20px;
@@ -921,18 +921,25 @@ p.progect-name {
   color: var(--primary-text-color);
 
   width: 448px;
-  margin-bottom: 12px;
+  margin-bottom: 30px;
 }
 
 .label-form-modal {
-  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  transform: translateY(-120%);
   font-size: 12px;
   line-height: 1.17;
 
   letter-spacing: 0.01em;
 
   color: var(--secondary-text-color);
-  margin-bottom: 4px;
+}
+
+.form-field {
+  position: relative;
 }
 
 .input-modal {
@@ -944,6 +951,9 @@ p.progect-name {
   background-color: var(--primary-bgc-color);
   color: var(--primary-text-color);
   padding: 0 10px 0 42px;
+  margin-bottom: 28px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-textarea {
@@ -961,13 +971,8 @@ p.progect-name {
   font-size: 14px;
   line-height: 1.7;
   letter-spacing: 0.03em;
-  margin-bottom: 30px;
   color: var(--secondary-text-color);
-}
-
-.checkbox-modal {
-  margin-bottom: 30px;
-  margin-left: 12px;
+  margin-left: 20px;
 }
 
 .label-policy a {
@@ -982,16 +987,61 @@ p.progect-name {
   text-align: center;
 }
 
-.form-field {
-  position: relative;
-}
-
 .modal-buttons {
   position: absolute;
-  top: 30px;
+  top: 11px;
   left: 12px;
   display: inline-block;
   width: 18px;
   height: 18px;
   fill: #000000;
+}
+
+.input-modal:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+
+.input-modal:focus ~ .modal-buttons {
+  fill: var(--accent-color);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
+.checkbox-modal {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: 8px;
+  margin-bottom: 20px;
+}
+
+.icon {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.checkbox:checked + .icon {
+  background-color: var(--accent-color);
+  background-image: url(../images/check.svg);
+  background-size: contain;
+  border: var(--accent-color);
+  background-origin: border-box;
 }

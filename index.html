@@ -404,60 +404,82 @@
           <h3 class="footer-title">Подпишитесь на рассылку</h3>
           <div class="subscribe-form">
             <form class="email-form" action="">
-            <input class="email-input" type="email" name="email" id="email" autocomplete="off" >
-            <label class="email-label" for="email">E-mail</label>
-          </form>
-          <button type="button" class="subscribe-button button"> Подписаться
-          <svg class="subscribe-icon"><use href="./images/symbol.svg#send" ></use></svg>
+              <input
+                class="email-input"
+                type="email"
+                name="email"
+                id="email"
+                autocomplete="off"
+              />
+              <label class="email-label" for="email">E-mail</label>
+            </form>
+            <button type="button" class="subscribe-button button">
+              Подписаться
+              <svg class="subscribe-icon">
+                <use href="./images/symbol.svg#send"></use>
+              </svg>
             </button>
-       
-          </div> </div>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <div class="backdrop " data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
-        <svg class="close-button"> <use href="./images/symbol.svg#close"></use></svg>  
+          <svg class="close-icon">
+            <use href="./images/symbol.svg#close"></use>
+          </svg>
         </button>
         <div class="modal-form">
           <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
-          <form action=""class="form-setion" autocomplete="off">
-            
-          <div class="form-field">
-            <label class="label-form-modal" for="name">
-            <svg class="modal-buttons">
-              <use href="./images/symbol.svg#icon-person"></use>
-            </svg>
-            Имя</label>
-          <input class="input-modal" type="text" name="name" id="name">
-          </div>
+          <form action="" class="form-setion" autocomplete="off">
+            <div class="form-field">
+              <input class="input-modal" type="text" name="name" id="name" />
+              <label class="label-form-modal" for="name"> Имя</label>
+              <svg class="modal-buttons">
+                <use href="./images/symbol.svg#icon-person"></use>
+              </svg>
+            </div>
 
-         <div class="form-field">
-            <label class="label-form-modal" for="tel">
-            <svg class="modal-buttons">
-              <use href="./images/symbol.svg#icon-phone"></use>
-            </svg>
-            Телефон</label>
-          <input class="input-modal" type="tel" name="tel" id="tel">
-         </div>
+            <div class="form-field">
+              <input class="input-modal" type="tel" name="tel" id="tel" />
+              <label class="label-form-modal" for="tel"> Телефон</label>
+              <svg class="modal-buttons">
+                <use href="./images/symbol.svg#icon-phone"></use>
+              </svg>
+            </div>
 
-          <div class="form-field">
-            <label class="label-form-modal" for="email">
-            <svg class="modal-buttons">
-              <use href="./images/symbol.svg#icon-email"></use>
-            </svg>
-            Почта</label>
-          <input class="input-modal" type="email" name="email" id="email">
-          </div>
+            <div class="form-field">
+              <input class="input-modal" type="email" name="email" id="email" />
+              <label class="label-form-modal" for="email"> Почта</label>
+              <svg class="modal-buttons">
+                <use href="./images/symbol.svg#icon-email"></use>
+              </svg>
+            </div>
 
-          <label  class="label-form-modal" for="comment">Комментарий</label>
-          <textarea class="input-modal input-textarea"  name="comment" id="comment" placeholder="Введите текст"></textarea>
+            <label class="label-form-modal" for="comment">Комментарий</label>
+            <textarea
+              class="input-modal input-textarea"
+              name="comment"
+              id="comment"
+              placeholder="Введите текст"
+            ></textarea>
 
-          <input class="checkbox-modal" type="checkbox" name="policy" id="policy">
-          <label class="label-policy" for="policy">Соглашаюсь c рассылкой и принимаю  <a href=""> Условия договора</a></label>
-        </form>
-        <button class="button" type="submit">Отправить</button>
+            <div class="checkbox-modal">
+              <label class="label-policy" for="policy">
+                <input
+                  class="checkbox visually-hidden"
+                  type="checkbox"
+                  name="policy"
+                  id="policy"
+                />
+                <span class="icon"></span>
+                Соглашаюсь c рассылкой и принимаю
+                <a href=""> Условия договора</a></label>
+            </div>
+          </form>
+          <button class="button" type="submit">Отправить</button>
         </div>
       </div>
     </div>
