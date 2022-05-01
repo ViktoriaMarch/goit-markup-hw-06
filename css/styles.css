@@ -195,7 +195,7 @@ ul {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.9;
+  line-height: 1.875;
 
   text-align: center;
   letter-spacing: 0.06em;
@@ -811,32 +811,187 @@ p.progect-name {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 40px;
 
-  min-height: 581px;
-  width: 528px;
+  max-height: 581px;
+  height: 100%;
+  max-width: 528px;
+  width: 100%;
   background-color: var(--primary-bgc-color);
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .modal-btn {
   position: absolute;
 
   top: 8px;
-  right: 21px;
+  right: 8px;
   padding: 0;
 
-  display: inline-block;
+  display: flex;
+
   width: 30px;
   height: 30px;
   border-radius: 50%;
   cursor: pointer;
-
+  color: #000000;
   background-color: var(--primary-bgc-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.modal-btn svg {
+.close-button {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
+  transform: translate(25%, 35%);
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+  align-self: center;
+}
+
+.subscribe {
+  margin-left: 93px;
+  width: 570px;
+}
+
+.email-form {
+  position: relative;
+}
+
+.email-label {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.email-input {
+  width: 358px;
+  height: 50px;
+  padding-right: 10px;
+  padding-left: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: var(--accent-bg-color);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.email-input:focus + .email-label {
+  visibility: hidden;
+}
+
+.subscribe-form {
+  display: flex;
+  flex-direction: row;
+  height: 50px;
+  width: 358px;
+}
+
+.subscribe-button {
+  position: relative;
+  margin-left: 12px;
+  text-align: center;
+  padding-left: 0;
+}
+
+.subscribe-icon {
+  position: absolute;
+  top: 13px;
+  right: 28px;
+  height: 24px;
+  width: 24px;
+}
+
+.input-modal:focus {
+  border: 1px solid var(--accent-color);
+}
+
+.form-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+
+  width: 448px;
+  margin-bottom: 12px;
+}
+
+.label-form-modal {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
+  margin-bottom: 4px;
+}
+
+.input-modal {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  background-color: var(--primary-bgc-color);
+  color: var(--primary-text-color);
+  padding: 0 10px 0 42px;
+}
+
+.input-textarea {
+  height: 120px;
+  resize: none;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+}
+
+.input-textarea::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.label-policy {
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+  margin-bottom: 30px;
+  color: var(--secondary-text-color);
+}
+
+.checkbox-modal {
+  margin-bottom: 30px;
+  margin-left: 12px;
+}
+
+.label-policy a {
+  color: var(--accent-color);
+  font-family: inherit;
+}
+
+.modal-form button {
+  display: block;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+.form-field {
+  position: relative;
+}
+
+.modal-buttons {
+  position: absolute;
+  top: 30px;
+  left: 12px;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  fill: #000000;
 }
