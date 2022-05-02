@@ -839,6 +839,8 @@ p.progect-name {
   color: #000000;
   background-color: var(--primary-bgc-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn:hover .close-icon {
@@ -940,6 +942,11 @@ p.progect-name {
 
 .form-field {
   position: relative;
+   margin-bottom: 20px;
+}
+
+.form-field.email {
+  margin-bottom: 0;
 }
 
 .input-modal {
@@ -951,16 +958,27 @@ p.progect-name {
   background-color: var(--primary-bgc-color);
   color: var(--primary-text-color);
   padding: 0 10px 0 42px;
-  margin-bottom: 28px;
 
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .input-textarea {
   height: 120px;
   resize: none;
   padding: 12px 16px;
   margin-bottom: 20px;
+  margin-top: 4px;
+}
+
+.label-textarea {
+  font-size: 12px;
+  line-height: 1.17;
+  
+
+  letter-spacing: 0.01em;
+
+  color: var(--secondary-text-color);
 }
 
 .input-textarea::placeholder {
